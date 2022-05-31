@@ -1,0 +1,23 @@
+.form-input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: .5px solid grey;
+}
+label{
+    font-size: 12px;
+    color: grey;
+}
+
+span{
+    font-size: 12px;
+    padding: 3px;
+    color: red;
+}
