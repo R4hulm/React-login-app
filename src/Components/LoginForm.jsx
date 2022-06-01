@@ -55,7 +55,7 @@ const LoginForm = () => {
     };
 
 return (
-        <form onSubmit={handleSubmit}>
+        <form className='form' onSubmit={handleSubmit}>
             <h1> Login </h1>
            <FormInput 
            name='email' 
@@ -75,7 +75,7 @@ return (
            onChange={handleChange} 
            errorMessage = {formErrors.password}
            />
-           <button>Submit</button>
+           <button className='login-btn'>Submit</button>
         </form>
 )
 }
