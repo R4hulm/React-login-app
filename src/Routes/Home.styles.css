@@ -7,5 +7,25 @@
 .checkbox-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0px ;
+
+}
+
+.button {
+    width: 40%;
+    height: 35px;
+    border:none;
+    background-color: #00ADB5;
+    color: white;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
 }

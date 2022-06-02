@@ -10,6 +10,7 @@ const Checkbox = (props) => {
         id={type} 
         onClick={onChange} 
         defaultChecked={isChecked}
+        checked={isChecked}
         />
         <label htmlFor={type}>{type}</label>
         </div>

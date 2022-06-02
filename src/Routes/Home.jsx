@@ -8,25 +8,45 @@ const Home = () => {
         isSearchable : true,
         isMultiselect : false,
         isSelectall : false,
-    })
+    });
+    const [selectedValue,setSelectedValue] = useState({
+        value:"",
+        label: "",
+    });
 
+    const [multiSelectValues,setMultiSelectValues] = useState([]);
+   
     const toggleSearchable = () => {
         setIsChecked({...isChecked,isSearchable:!isChecked.isSearchable});
+       
     }
     const toggleMultiselect = () => {
         setIsChecked({...isChecked,isMultiselect:!isChecked.isMultiselect});
+       
     }
     const toggleSelectall = () => {
         setIsChecked({isSelectall:!isChecked.isSelectall,
             isSearchable:!isChecked.isSelectall,
             isMultiselect:!isChecked.isSelectall});  
     }
+    const handleSelectChange =(value) => {
+        if(!isChecked.isMultiselect) {
+        setSelectedValue({...selectedValue,value:value.value,label:value.label});
+        } else {
+            setMultiSelectValues(value);
+        }
+    }
 
-    const clearbuttonHandler =(e) => {
-        e.preventDefault();
+    const clearbuttonHandler =() => {
+        if(!isChecked.isMultiselect) {
+        setSelectedValue({value:'',label:''});
+        } else {
+            setMultiSelectValues([]);
+        }
     }
     const submithandler =(e) => {
         e.preventDefault();
+        
     }
 
 return(
@@ -52,12 +72,16 @@ return(
             <Dropdown 
             isSearchable={isChecked.isSearchable} 
             isMultiSelect={isChecked.isMultiselect} 
+            selectedValue={selectedValue.label}
+            multiSelectValues = {multiSelectValues}
+            onChange={handleSelectChange}
             />
-            {false && (
-            <>
-            <button onClick={submithandler}>submit</button>
-            <button onClick={clearbuttonHandler}>clear</button>
-            </>
+            {(( !isChecked.isMultiselect && selectedValue.label !=='')
+            || (isChecked.isMultiselect && multiSelectValues.length !==0)) && (
+            <div className='button-container'>
+            <button className='button' onClick={clearbuttonHandler}>clear</button>
+            <button className='button' onClick={submithandler}>submit</button>
+            </div>
             )}
         </form>
     </div>
