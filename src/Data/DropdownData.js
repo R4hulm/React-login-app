@@ -2,19 +2,19 @@ export const dropdownColors = ['red','yellow','green','blue'];
 
 export const dropdownItems = [
     {
-        value: 'react',
-        label: 'React',
+        title: 'React',
+        id: 'react',
     },
     {
-        value: 'angular',
-        label: 'Angular',
+        title: 'Angular',
+        id: 'angular',
     },
     {
-        value: 'vue',
-        label: 'Vue',
+        title: 'Vue',
+        id: 'vue',
     },
     {
-        value: 'ember',
-        label: 'Ember',
+        title: 'Ember',
+        id: 'ember',
     }
   ];

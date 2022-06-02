@@ -1,31 +1,9 @@
-.dropdown-container {
-    width: 400px;
-    margin: 100px auto;
-    display: flex;
-    flex-direction: column;
-}
-.checkbox-container {
+.selectform-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-  
+    justify-content: space-evenly;
 }
 
-.button-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px 0px ;
-
-}
-
-.button {
-    width: 40%;
-    height: 35px;
-    border:none;
-    background-color: #00ADB5;
-    color: white;
-    cursor: pointer;
-    color: white;
-    border-radius: 5px;
+.heading{
+    text-align: center;
 }
